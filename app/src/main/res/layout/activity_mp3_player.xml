@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MP3PlayerActivity">
+
+    <LinearLayout style="@style/musicLay"
+        >
+    <Button style="@style/music"
+android:id="@+id/btn1"
+        android:text="@string/list1"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/musicLay"
+       >
+
+        <Button style="@style/music"
+            android:id="@+id/btn2"
+            android:text="@string/list2"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/musicLay"
+        >
+        <Button style="@style/music"
+            android:id="@+id/btn3"
+            android:text="@string/musicpush"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/musicLay"
+                >
+        <Button style="@style/music"
+
+            android:text="@string/musicstop"
+            android:id="@+id/btn4"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

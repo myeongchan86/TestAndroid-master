@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CalCActivity">
+
+    <!-- 식 + 결과 -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <EditText style="@style/clac_top_ratio"
+            android:maxLength="4"
+            android:id="@+id/et_no1"
+            />
+        <TextView style="@style/clac_top_between"
+            android:id="@+id/tv_sign" />
+
+        <EditText style="@style/clac_top_ratio"
+            android:maxLength="4"
+            android:id="@+id/et_no2"
+            />
+        <TextView style="@style/clac_top_between"
+            android:text="="/>
+        <TextView style="@style/clac_top_ratio"
+            android:id="@+id/tv_result"
+            android:maxLength="15"
+            android:textSize="20dp" />
+    </TableRow>
+
+    <!--숫자+연산기호-->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <!--숫자-->
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <!--7~9-->
+            <TableRow style="@style/clac_bottom_tablerow">
+
+                <Button style="@style/clac_bottom_num"
+                    android:text="7"/>
+                <Button style="@style/clac_bottom_num"
+                    android:text="8"/>
+                <Button style="@style/clac_bottom_num"
+                    android:text="9"/>
+            </TableRow>
+
+            <!--4~6-->
+            <TableRow style="@style/clac_bottom_tablerow">
+
+                <Button style="@style/clac_bottom_num"
+                    android:text="4"/>
+                <Button style="@style/clac_bottom_num"
+                    android:text="5"/>
+                <Button style="@style/clac_bottom_num"
+                    android:text="6"/>
+            </TableRow>
+
+            <!--1~3-->
+            <TableRow style="@style/clac_bottom_tablerow">
+
+                <Button style="@style/clac_bottom_num"
+                    android:text="1"/>
+                <Button style="@style/clac_bottom_num"
+                    android:text="2"/>
+                <Button style="@style/clac_bottom_num"
+                    android:text="3"/>
+            </TableRow>
+
+            <!--0, = -->
+            <TableRow style="@style/clac_bottom_tablerow">
+
+                <Button style="@style/clac_bottom_num"
+                    android:text="0"/>
+                <Button style="@style/clac_bottom_num"
+                    android:onClick="calc_anser"
+                    android:layout_weight="2"
+                    android:text="="/>
+            </TableRow>
+
+        </TableLayout>
+
+
+        <!--연산기호-->
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button style="@style/clac_bottom_sign"
+                android:text="C"/>
+
+            <Button style="@style/clac_bottom_sign"
+                android:text="/"/>
+
+            <Button style="@style/clac_bottom_sign"
+                android:text="*"/>
+
+            <Button style="@style/clac_bottom_sign"
+                android:text="-"/>
+
+            <Button style="@style/clac_bottom_sign"
+                android:text="+"/>
+        </TableLayout>
+
+    </TableRow>
+</LinearLayout>
